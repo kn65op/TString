@@ -15,8 +15,8 @@ set(LIB_GMOCK gmock)
 set(TESTS_POSTFIX Tests)
 set(MOCKS_POSTFIX Mocks)
 
-set(UNIQUE_NAMER_TESTS_DIR UniqueNamer${TESTS_POSTFIX})
-set(UNIQUE_NAMER_MOCKS_DIR UniqueNamer${MOCKS_POSTFIX})
+set(UNIQUE_NAMER_TESTS_DIR UniqueString${TESTS_POSTFIX})
+set(UNIQUE_NAMER_MOCKS_DIR UniqueString${MOCKS_POSTFIX})
 
 #project includes
 #include_directories(${PROJECT_SOURCE_DIR}/${SRC2_DIR}/GmockTest)

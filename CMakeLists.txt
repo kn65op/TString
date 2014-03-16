@@ -29,7 +29,7 @@ include_directories(${SRC_DIR})
 
 #files
 file(GLOB EXAMPLE_FILES ${SRC_DIR}/*.cpp)
-file(GLOB UNIQUE_NAMER_FILES ${SRC_DIR}/UniqueNamer/src/*.cpp)
+file(GLOB UNIQUE_NAMER_FILES ${SRC_DIR}/UniqueString/src/*.cpp)
 
 
 #executables
