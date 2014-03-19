@@ -37,4 +37,6 @@ TEST_F(UniqueStringWithStringTester, UniqueStringShouldNotBeEqualToUnderlyingTyp
   std::string other{"Test2"};
   UniqueString<std::string> us{s};
   
+  ASSERT_NE(s, un);
+  ASSERT_TRUE(un != s);
 }

@@ -1,37 +1,15 @@
 #ifndef UNIQUESTRING_H
 #define UNIQUESTRING_H
 
-template <class String> class UniqueString
+template <class String> class UniqueString : public String
 {
 public:
-  UniqueString() : content("Non empty")
+  UniqueString() : String("UniqueString")
   {}
   
-  UniqueString(String s) : content(s)
+  UniqueString(String s) : String(s)
   {}
-  
-  operator String() const
-  {
-    return content;
-  }
-  
-  bool empty() const
-  {
-    return content.empty();
-  }
-  
-private:
-  String content;
 };
 
-template <class String> bool             operator==(String s, UniqueString<String> us)
-{
-  return s == static_cast<String>(us);
-}
-
-template <class String> bool             operator==(UniqueString<String> us, String s)
-{
-  return s == static_cast<String>(us);
-}
 
 #endif // UNIQUESTRING_H
