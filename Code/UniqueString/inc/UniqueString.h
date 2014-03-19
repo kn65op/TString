@@ -7,6 +7,9 @@ public:
   UniqueString() : content("Non empty")
   {}
   
+  UniqueString(String s) : content(s)
+  {}
+  
   operator String() const
   {
     return content;
@@ -20,5 +23,15 @@ public:
 private:
   String content;
 };
+
+template <class String> bool             operator==(String s, UniqueString<String> us)
+{
+  return s == static_cast<String>(us);
+}
+
+template <class String> bool             operator==(UniqueString<String> us, String s)
+{
+  return s == static_cast<String>(us);
+}
 
 #endif // UNIQUESTRING_H
