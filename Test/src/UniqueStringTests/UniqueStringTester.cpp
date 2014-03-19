@@ -40,3 +40,10 @@ TEST_F(UniqueStringWithStringTester, UniqueStringShouldNotBeEqualToUnderlyingTyp
   ASSERT_NE(s, un);
   ASSERT_TRUE(un != s);
 }
+
+TEST_F(UniqueStringWithStringTester, TwoNewUniqueStringsShouldNotBeEqual)
+{
+  UniqueString<std::string> un2;
+  
+  ASSERT_NE(un, un2);
+}
