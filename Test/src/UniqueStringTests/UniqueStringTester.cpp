@@ -19,7 +19,7 @@ TEST_F(UniqueStringWithStringTester, NewUniqueStringShouldNotChange)
   std::string t{"tesT"};
   UniqueString<std::string> un2{t};
   
-  EXPECT_EQ(t, un2);
+  EXPECT_EQ(t, un2.getContent());
 }
 
 TEST_F(UniqueStringWithStringTester, UniqueStringShouldBeEqualToUnderlyingTypeInBoothCases)
@@ -28,7 +28,7 @@ TEST_F(UniqueStringWithStringTester, UniqueStringShouldBeEqualToUnderlyingTypeIn
   UniqueString<std::string> us{s};
   
   EXPECT_TRUE(s == us);
-  EXPECT_TRUE(us == s);               
+  EXPECT_TRUE(us == s);
 }
 
 TEST_F(UniqueStringWithStringTester, UniqueStringShouldNotBeEqualToUnderlyingTypeInBoothCases)
@@ -58,5 +58,4 @@ TEST_F(UniqueStringWithStringTester, AfterDeletionUniqueStringCanBeUseAgain)
   UniqueString<std::string> us{s};
   EXPECT_EQ(s, us);
 }
-  
-  
+ 
